@@ -1,5 +1,6 @@
 import {PerspectiveCamera,VideoTexture,Vector3,Scene,WebGLRenderer,MeshBasicMaterial,BoxBufferGeometry,Mesh} from "three";
 import { GodRaysEffect,BloomEffect, BokehEffect, GlitchEffect,EffectComposer, EffectPass,RenderPass} from "postprocessing";
+// let shader = require('./my-lovely-shader.glsl');
 
 let vtex,cv,cam;
 let scn,rd,geo,vmtl;
