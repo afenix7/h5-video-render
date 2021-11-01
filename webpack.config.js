@@ -10,6 +10,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
         static:'./dist',
         port:8888,
     },
+    performance: {
+        maxEntrypointSize: 1024000,
+        maxAssetSize: 1024000
+    },
+    module:{
+        rules:[
+            {
+                test:/\.js$/,
+                use:{
+                    loader:"babel-loader",
+                    options:{
+                        presets:['@babel/preset-env']
+                    }
+                }
+            },
+            {
+                test: /\.glsl$/,
+                loader: 'webpack-glsl'
+            }
+        ]
+    },
     plugins:[
         new HtmlWebpackPlugin({
             title: 'h5-video-render',

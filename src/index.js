@@ -52,7 +52,6 @@ const bloomPass = new EffectPass(cam, new BloomEffect())
 const glitchPass = new EffectPass(cam,new GlitchEffect())
 const bokehPass = new EffectPass(cam,new BokehEffect())
 let apply_fx = name=>{
-    // composer.removeAllPasses()
     if(name=='Bloom'){
         !bloomOn?composer.addPass(bloomPass):composer.removePass(bloomPass)
         bloomOn = !bloomOn
